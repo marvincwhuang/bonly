@@ -1,0 +1,6 @@
+<%= simple_form_for @post, :html => { :class => 'table', :multipart => true } do |f| %>
+	<%= f.input :image, as: :file  %>
+	<%= f.input :title %>
+	<%= f.input :content %>
+	<%= f.submit %>
+<% end %>
