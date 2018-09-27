@@ -3,11 +3,9 @@ class PostsController < ApplicationController
 	before_action :find_post, only: [ :show, :edit, :update, :destroy ]
 
 
-	def home 
-		@post = Post.all.order(created_at: :desc).limit(3)
-	end
+	
 	def index
-		@post = Post.all.order(created_at: :desc)
+		@post = Post.all.order(created_at: :desc).limit(3)
 	end
 
 	def show
