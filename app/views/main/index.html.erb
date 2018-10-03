@@ -1,21 +1,62 @@
 <div class="banner">
-	<nav class="navbar">
-		<div id="logo-s"><img src="/assets/b-only.png" alt="" ></div>
-		<div class="control">
-			<a id="EN" href="#">EN |</a>
-			<a id="CN" href="#">CN</a>
-			<a id="home" href="#">Home</a>
-			<a id="contact" href="#">Contact</a>
-		</div>	
-	</nav>
-
-	<div id="logo-lg"><img src="/assets/b-only.png" alt=""></div>
-	<div id="slogan"><img src="/assets/b-only2.png" alt=""></div>
-	<p>Your best clothing supply partner</p>
-	<a href="#"><i class="fas fa-angle-double-down"></i></a>
+	<div class="brand">
+		<div id="logo-lg"><img src="/assets/b-only.png" alt="logo-large"></div>
+		<div id="slogan"><img src="/assets/b-only2.png" alt="logo-slogan"></div>
+		<p>Your best clothing supply partner</p>
+	</div>
+	<a href="#new"><i class="fas fa-angle-double-down"></i></a>
 </div>
 
+<div class="new" id="new">
+	<div class="image-slider">
+		<div class="arrows">
+			<span title="1" class="arrow"> < </span>
+			<span title="0" class="arrow" style="float: right"> > </span>
+		</div>
+		<div class="images">
+			<% @post.each do |post| %>
+				<%= link_to post do %>
+					<%= image_tag post.image.url(:medium) %>
+				<% end %>
+			<% end %>
 
-<% @post.each do |post| %>
-	<%= image_tag post.image.url(:medium) %>
-<% end %>
+		</div>
+	</div>
+	<%= link_to 'New In', posts_path, class: "btn btn-new"%>
+</div>
+
+<div class="about">
+	<div class="cards">
+		<div id="experience" class="card">
+			<h2>Profession</h2>
+			<p>We provide the latest fashion trends & clothing for women with 30 year clothing market experience. </p>
+		</div>
+		<div id="Quality" class="card middle">
+			<h2>Quality</h2>
+			<p>Quality is our top priority. We cooperate with supply partner to ensure the best quality.</p>
+		</div>
+		<div id="Service" class="card">
+			<h2>Service</h2>
+			<p>We care about your purchasing experience. We have complete exchange policy.</p>
+		</div>
+	</div>
+	<div class="button">
+		<a href="#" class="btn btn-learn">Learn more</a>
+	</div>
+</div>
+
+<div class="contact">
+	<h2>Find a reliable trustworthy business partner?</h2>
+	<p>We are the reliable wholesaler specialized in woman clothing. We dedicate to provide the latest fashion trends and clothing for our customers with best quality. </p>
+	<a href="#" class="btn btn-contact">Contact Us</a>
+</div>
+
+<footer>
+	<p>©2018 Chi-Wei Huang / B.Only</p>
+</footer>
+
+
+
+
+
+ 

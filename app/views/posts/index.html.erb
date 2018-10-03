@@ -1,15 +1,9 @@
-<div class="container">
-	<div class="posts">
-		<h1>All Posts</h1>
-		<div class="post">
-			<% @post.each do |post| %>
-				<%= link_to post.title, post %>
+<div class="posts">
+	<div class="post">
+		<% @post.each do |post| %>
+			<%= link_to post do %>
 				<%= image_tag post.image.url(:medium) %>
-				Published at <%= time_ago_in_words(post.updated_at) %>
-				<%= link_to "Delete", post_path(post), method: :delete, data: {comfirm: "Are you sure?"} %>
 			<% end %>
-		</div>
-		<%= link_to "Create", new_post_path %>
-		
-	</div>	
-</div>
+		<% end %>
+	</div>
+</div>	

@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,3 +14,50 @@
  *= require_tree .
  *= require_self
  */
+
+
+/* Components */
+.btn {
+	font-size: 18px;
+	line-height: 26px;
+	border: 2px solid black;
+	border-radius: 3px;
+	padding: 5px 15px 5px 15px;
+	cursor: pointer;
+}
+
+.btn-control {
+	font-size: 18px;
+	border: none;
+	padding: 5px 15px 5px 15px;
+	cursor: pointer;
+	color: white;
+}
+
+.btn-lang {
+	padding: 0;
+	border: none;
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	line-height: 36px;
+}
+
+.navbar {
+	height: 36px; 
+	position: relative;
+	background-color: #525163;
+	padding: 0 50px 0 50px;
+	.lang {
+		display: inline-block;
+		float: left;
+	}
+	.control {
+		display: inline-block;
+		float: right;
+		a {
+			display: inline-block;
+			text-decoration: none;
+		}
+	}
+}

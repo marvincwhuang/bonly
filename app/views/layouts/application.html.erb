@@ -4,14 +4,26 @@
     <title>Bonly</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">      
   </head>
 
   <body>
+    <nav class="navbar">
+      <div class="lang">
+        <a href="#" class="btn btn-lang" id="EN">EN |</a>
+        <a href="#" class="btn btn-lang" id="CN">CN</a>  
+      </div>
+
+      <div class="control">
+        <%= link_to 'Home', root_path, class: "btn btn-control" %>
+        <%= link_to 'New In', posts_path, class: "btn btn-control"%>
+        <a class="btn btn-control" id="about" href="#">About</a>
+        <a class="btn btn-control" id="contact" href="#">Contact</a>
+      </div>  
+    </nav>
     <%= yield %>
   </body>
 </html>

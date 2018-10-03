@@ -64,7 +64,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.5'
 gem 'simple_form', '~> 4.0'
 gem 'paperclip', '~> 6.1'
-
+gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
+gem 'rails_admin', '~> 1.4', '>= 1.4.2'
 
 
 
