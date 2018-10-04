@@ -18,10 +18,27 @@
       </div>
 
       <div class="control" data-no-turbolink>
-        <%= link_to 'Home', root_path, class: "btn btn-control" %>
-        <%= link_to 'New In', posts_path, class: "btn btn-control" %>
-        <a class="btn btn-control" id="about" href="#">About</a>
-        <a class="btn btn-control" id="contact" href="#">Contact</a>
+        <%= link_to root_path, class: "btn btn-control" do %>
+          <i class="fas fa-home"></i>
+        <% end %>
+        <%= link_to root_path, class: "btn btn-control" do %>
+          <i class="fas fa-heart"></i>
+        <% end %>
+
+        <div class="dropdown">
+          <%= link_to root_path, class: "btn btn-control" do %>
+            <i class="fas fa-user", class: "dropdown-btn"></i>
+          <% end %>
+          <div class="dropdown-content">
+            <% if user_signed_in? %>
+              <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+            <% else %>
+              <%= link_to "Sign In", new_user_session_path %>
+              <%= link_to "Sign Up", new_user_registration_path %>
+            <% end %>
+          </div>
+        </div>
+        
       </div>  
     </nav>
     <%= yield %>

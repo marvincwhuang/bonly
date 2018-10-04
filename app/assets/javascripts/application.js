@@ -14,5 +14,3 @@
 //= require jquery
 //= require activestorage
 
-
-

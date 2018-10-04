@@ -1,11 +1,10 @@
 var COUNT = 0;
 var GO = false;
 var TIMER;
-var LANG = 'CN';
-
 
 window.onload = function() {
 	langCN();
+	
 	var images = document.getElementsByClassName("images")[0];
 	var image = document.getElementsByClassName("image");
 	var arrow = document.getElementsByClassName("arrow");
@@ -60,7 +59,7 @@ window.onload = function() {
 
 
 
-/* Language Switch */
+// /* Language Switch */
 var CN = document.getElementById("CN");
 var EN = document.getElementById("EN");
 CN.addEventListener('click', langCN, false);
@@ -68,6 +67,7 @@ EN.addEventListener('click', langEN, false);
 
 
 function langEN() {	
+	LANG = 'EN';
 	var slogan = document.getElementById("slogan");
 	var btn_new = document.getElementsByClassName("btn-new")[0];
 	var about_title1 = document.getElementById("about_title1");
@@ -97,6 +97,7 @@ function langEN() {
 
 
 function langCN() {
+	LANG = 'CN';
 	var slogan = document.getElementById("slogan");
 	var btn_new = document.getElementsByClassName("btn-new")[0];
 	var about_title1 = document.getElementById("about_title1");
