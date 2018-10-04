@@ -1,3 +1,45 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.posts {
+	background-color: #FECF8C;
+	font-size: 0;
+	padding: 50px;	
+	.post {
+		display: inline-block;
+		box-sizing: border-box;
+		border: none;
+		margin: 0 6px 12px 6px;
+		padding: none;
+		width: calc(20vw - 12px - 100px/5);
+		height: calc(20vw * 4 /3 - 12px - 100px/2 + 60px);
+		vertical-align: top; 
+
+		@media (max-width: 1200px) {
+			width: calc(25vw - 12px - 100px/4);
+			height: calc(25vw * 4 /3 - 12px - 100px/2 + 60px);
+		}
+		@media (max-width: 992px) {
+			width: calc(33.33vw - 12px - 100px/3);
+			height: calc(33.33vw * 4 /3 - 12px - 100px/2 + 60px);
+		}
+		@media (max-width: 768px) {
+			width: calc(50vw - 12px - 100px/2);
+			height: calc(50vw * 4 /3 - 12px - 100px/2 + 60px);
+		}
+
+		img {
+			width: 100%;
+			height: calc(100% - 60px);
+			object-fit: cover;
+
+		}
+		p {
+			height: 60px;
+			font-size: 14px;
+			line-height: 15px;
+			margin-top: 5px;
+
+		}
+	}
+}

@@ -1,9 +1,12 @@
 <div class="posts">
+	<% @post.each do |post| %>
 	<div class="post">
-		<% @post.each do |post| %>
-			<%= link_to post do %>
-				<%= image_tag post.image.url(:medium) %>
-			<% end %>
+		<%= link_to post do %>
+			<%= image_tag post.image.url(:medium) %>
 		<% end %>
+		<p><%= post.title %></p>
 	</div>
+	<% end %>
 </div>	
+
+

@@ -17,13 +17,16 @@
         <a href="#" class="btn btn-lang" id="CN">CN</a>  
       </div>
 
-      <div class="control">
+      <div class="control" data-no-turbolink>
         <%= link_to 'Home', root_path, class: "btn btn-control" %>
-        <%= link_to 'New In', posts_path, class: "btn btn-control"%>
+        <%= link_to 'New In', posts_path, class: "btn btn-control" %>
         <a class="btn btn-control" id="about" href="#">About</a>
         <a class="btn btn-control" id="contact" href="#">Contact</a>
       </div>  
     </nav>
     <%= yield %>
+    <footer>
+      <p>©2018 Chi-Wei Huang / B.Only</p>
+    </footer>
   </body>
 </html>

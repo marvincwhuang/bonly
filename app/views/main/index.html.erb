@@ -1,8 +1,10 @@
+<%= javascript_include_tag('main.js') %>
+
 <div class="banner">
 	<div class="brand">
 		<div id="logo-lg"><img src="/assets/b-only.png" alt="logo-large"></div>
-		<div id="slogan"><img src="/assets/b-only2.png" alt="logo-slogan"></div>
-		<p>Your best clothing supply partner</p>
+		<div id="logo-text"><img src="/assets/b-only2.png" alt="logo-slogan"></div>
+		<p id="slogan"></p>
 	</div>
 	<a href="#new"><i class="fas fa-angle-double-down"></i></a>
 </div>
@@ -16,10 +18,9 @@
 		<div class="images">
 			<% @post.each do |post| %>
 				<%= link_to post do %>
-					<%= image_tag post.image.url(:medium) %>
+					<%= image_tag post.image.url(:medium), class: "image" %>
 				<% end %>
 			<% end %>
-
 		</div>
 	</div>
 	<%= link_to 'New In', posts_path, class: "btn btn-new"%>
@@ -27,33 +28,31 @@
 
 <div class="about">
 	<div class="cards">
-		<div id="experience" class="card">
-			<h2>Profession</h2>
-			<p>We provide the latest fashion trends & clothing for women with 30 year clothing market experience. </p>
+		<div class="card">
+			<h2 id="about_title1"></h2>
+			<p id="about_content1"></p>
 		</div>
-		<div id="Quality" class="card middle">
-			<h2>Quality</h2>
-			<p>Quality is our top priority. We cooperate with supply partner to ensure the best quality.</p>
+		<div class="card middle">
+			<h2 id="about_title2"></h2>
+			<p id="about_content2"></p>
 		</div>
-		<div id="Service" class="card">
-			<h2>Service</h2>
-			<p>We care about your purchasing experience. We have complete exchange policy.</p>
+		<div class="card">
+			<h2 id="about_title3"></h2>
+			<p id="about_content3"></p>
 		</div>
 	</div>
-	<div class="button">
-		<a href="#" class="btn btn-learn">Learn more</a>
+	<div class="pattern-block">	
 	</div>
 </div>
 
 <div class="contact">
-	<h2>Find a reliable trustworthy business partner?</h2>
-	<p>We are the reliable wholesaler specialized in woman clothing. We dedicate to provide the latest fashion trends and clothing for our customers with best quality. </p>
-	<a href="#" class="btn btn-contact">Contact Us</a>
+	<h2 id="contact1"></h2>
+	<h2 id="contact2"></h2>
+	<h1 id="contact3"></h1>
+	<h2 id="call"></h2>
 </div>
 
-<footer>
-	<p>©2018 Chi-Wei Huang / B.Only</p>
-</footer>
+
 
 
 
