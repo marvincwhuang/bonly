@@ -1,7 +1,49 @@
-<% (0...@post.images.count).each do |image| %>
-	<%= image_tag(@post.images[image], style:"width: 300px") %>  
-<% end %>
-<%= @post.title %>			
-<%= @post.content %>
-<%= link_to "Back", posts_path  %>
+<%= javascript_include_tag('show.js') %>
+
+<div id="show">
+	<div class="image_slider">
+		<div class="image_container">
+			<% if @post.images.count != 1 %>
+				<div class="arrows">
+					<span title="1" class="arrow"> < </span>
+					<span title="0" class="arrow" style="float: right"> > </span>
+				</div>
+			<% end %>
+			<ul class="ul_images">
+				<% (0...@post.images.count).each do |image| %>
+					<li class="li_image" ><%= image_tag(@post.large(image)) %> </li>	 
+				<% end %>
+			</ul>
+		</div>
+		<% if @post.images.count != 1 %>
+			<div class="image_btns">
+				<% (0...@post.images.count).each do |image| %>
+					<li class="image_btn"><%= image_tag(@post.small(image)) %> </li>	 
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+
+	<div class="product_description">
+		<div class="title">
+			<h2><%= @post.title %></h2>
+		</div>
+		<div class="content">
+			<p><%= @post.content %></p>	
+		</div>
+		<div class="control">
+			<div class="back">
+				<%= link_to "Back", posts_path, class:"btn btn_back"  %>
+			</div>
+			<div class="favorite">
+				<i class="fas fa-heart"></i>
+				<%= link_to "Add to favorite", class:"btn btn_favorite" %>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
 

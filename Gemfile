@@ -67,7 +67,7 @@ gem 'paperclip', '~> 6.1'
 gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
 gem 'rails_admin', '~> 1.4', '>= 1.4.2'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
-
+gem 'mini_magick', '~> 4.9', '>= 4.9.2'
 
 
 

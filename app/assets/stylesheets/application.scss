@@ -14,7 +14,7 @@
  *= require_tree .
  *= require_self
  */
-
+$color1: #FECF8C;
 
 /* Components */
 .btn {
@@ -47,7 +47,7 @@
 .navbar {
 	height: 36px; 
 	position: relative;
-	background-color: #525163;
+	background-color: rgba(0,0,0,1);
 	padding: 0 50px 0 50px;
 	.lang {
 		display: inline-block;
@@ -100,7 +100,7 @@
 
 footer {
 	position: relative;
-	background-color: #525163;
+	background-color: rgba(0,0,0,1);
 	text-align: center;
 	padding: 24px 0 24px 0;
 	margin: 0;

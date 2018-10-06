@@ -52,7 +52,7 @@ html, body {
 
 ////////New In////////
 .new {
-	background-color: #FECF8C;
+	background-color: rgba(255,255,255,1);
 	padding: 50px 50px 110px 50px;
 	position: relative;
 	.image-slider {
@@ -86,9 +86,10 @@ html, body {
 	}
 	.btn-new {
 		display: inline-block;
-		border-radius: 5px;
+		border-radius: 3px;
 		text-decoration: none;
-		color: black;
+		color: rgba(255,255,255,1);
+		background-color: rgba(0,0,0,1);
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
@@ -96,7 +97,7 @@ html, body {
 	}
 }
 .about {
-	background-color: #525163;
+	background-color: rgba(0,0,0,0.8);
 	color: white;
 	height: 100%;
 	position: relative;
