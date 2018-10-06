@@ -11,7 +11,7 @@
 			<% end %>
 			<ul class="ul_images">
 				<% (0...@post.images.count).each do |image| %>
-					<li class="li_image" ><%= image_tag(@post.large(image)) %> </li>	 
+					<li class="li_image" ><%= image_tag(@post.medium(image)) %> </li>	 
 				<% end %>
 			</ul>
 		</div>

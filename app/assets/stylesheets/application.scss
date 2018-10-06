@@ -63,6 +63,32 @@ $color1: #FECF8C;
 	}
 }
 
+@media (max-width: 768px) {
+	.navbar {
+		height: 36px; 
+		position: relative;
+		background-color: rgba(0,0,0,1);
+		padding: 0 50px 0 50px;
+		display: flex;
+		justify-content: center;
+		.lang {
+			display: inline-block;
+			float: left;
+			#CN {
+				margin-right: 15px;
+			}
+		}
+		.control {
+			display: inline-block;
+			float: left;
+			a {
+				display: inline-block;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
 .dropdown {
   display: inline-block;
   .dropdown-btn {

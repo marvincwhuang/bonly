@@ -39,7 +39,7 @@ window.onload = function () {
 	}
 
 	function imagetransform() {
-		ul_images.style.transform = `translate(${ -450 * COUNT }px)`;
+		ul_images.style.transform = `translate(${ -300 * COUNT }px)`;
 	}
 	function buttonactive() {
 		image_btn[COUNT].style.opacity = 1;
