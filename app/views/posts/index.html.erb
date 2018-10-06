@@ -2,7 +2,7 @@
 	<% @post.each do |post| %>
 	<div class="post">
 		<%= link_to post do %>
-			<%= image_tag post.image.url(:medium) %>
+			<%= image_tag(post.images[0], style:"width: 300px") %>  
 		<% end %>
 		<p><%= post.title %></p>
 		<a href="#" class="favorite"><i class="fas fa-heart"></i></a>

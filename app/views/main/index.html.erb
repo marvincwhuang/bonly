@@ -18,7 +18,7 @@
 		<div class="images">
 			<% @post.each do |post| %>
 				<%= link_to post do %>
-					<%= image_tag post.image.url(:medium), class: "image" %>
+					<%= image_tag(post.images[0], style:"width: 300px") %>  
 				<% end %>
 			<% end %>
 		</div>
