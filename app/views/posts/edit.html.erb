@@ -1,6 +1,11 @@
-<div class="container">
+<div id="edit">
 	<h1>Edit Post</h1>
+	<div class="control">
+		<%= link_to "Back", posts_path %>
+		<%= link_to @post, method: :delete, data: { confirm: 'Are you sure?' } do %>
+			<i class="far fa-trash-alt"></i>
+		<% end %>
+	</div>
+
 	<%= render 'form' %>
-	<%= link_to "Cancel", root_path, class: "btn btn-primary" %>
-	<%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>

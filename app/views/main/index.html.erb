@@ -9,16 +9,16 @@
 	<a href="#new"><i class="fas fa-angle-double-down"></i></a>
 </div>
 
-<div class="new" id="new">
+<div class="new">
 	<div class="image-slider">
 		<div class="arrows">
-			<span title="1" class="arrow"> < </span>
-			<span title="0" class="arrow" style="float: right"> > </span>
+			<span title="left" class="arrow"> < </span>
+			<span title="right" class="arrow" style="float: right"> > </span>
 		</div>
 		<div class="images">
 			<% @post.each do |post| %>
 				<%= link_to post do %>
-					<%= image_tag(post.medium(0)) %>  
+					<%= image_tag(post.medium(0), class:"image") %>  
 				<% end %>
 			<% end %>
 		</div>

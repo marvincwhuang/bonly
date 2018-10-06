@@ -1,26 +1,28 @@
 var COUNT = 0;
-var GO = false;
 var TIMER;
+var GO = false;
 var LANG = CN;
 
 window.onload = function() {
 	lang();
-
 	var images = document.getElementsByClassName("images")[0];
 	var image = document.getElementsByClassName("image");
 	var arrow = document.getElementsByClassName("arrow");
 
 	showtime();
 
+	
 	function showtime() {
 	    TIMER = setInterval(function(){
-	      	if ( GO == false ) {
+	      	if ( image.length > 6 ) {
 	        	COUNT++;
 	        	imagetransform();
-	        	if ( COUNT >= image.length -6 ){
+	        	if ( COUNT > image.length -6 ){
 	        		COUNT = 0;
+	        		imagetransform();
 	       		}
 	    	}
+
 		}, 2000);
 	}
 
@@ -32,7 +34,7 @@ window.onload = function() {
 	 	  showtime();
 	 	}
 	 	arrow[i].onclick = function() {
-	 	  if ( this.title == 0 ) {
+	 	  if ( this.title == 'right' ) {
 	 	    COUNT++;
 	 	    if ( COUNT > image.length-6) {
 	 	      COUNT = 0;
@@ -58,8 +60,6 @@ window.onload = function() {
 
 }
 
-
-
 /* Language Init */
 function lang() {
 	if (sessionStorage.getItem("lang")) {
@@ -79,11 +79,8 @@ var CN = document.getElementById("CN");
 var EN = document.getElementById("EN");
 CN.addEventListener('click', langCN, false);
 EN.addEventListener('click', langEN, false);
-
-
 function langEN() {	
 	sessionStorage.setItem("lang", "EN");
-
 	var slogan = document.getElementById("slogan");
 	var btn_new = document.getElementsByClassName("btn-new")[0];
 	var about_title1 = document.getElementById("about_title1");
@@ -109,9 +106,6 @@ function langEN() {
 	contact3.innerHTML = "Please give us a call";
 	call.innerHTML = "+886 7 2357291";
 }
-	
-
-
 function langCN() {
 	sessionStorage.setItem("lang", "CN");
 
