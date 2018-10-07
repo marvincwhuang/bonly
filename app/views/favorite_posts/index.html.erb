@@ -1,0 +1,25 @@
+<div id="index">
+	<div class="posts">
+		<% @posts.each do |post| %>
+		<div class="post">
+			<%= link_to post do %>
+				<%= image_tag(post.medium(0)) %>  
+			<% end %>
+			<p><%= post.title %></p>
+			<% if current_user %>
+				<% if !post.favorited_by.ids.include? current_user.id %>
+					<%= link_to favorite_post_path(post, type: "favorite"), method: :put, class:"btn btn_favorite" do %>
+			        	 <i class="fas fa-heart"></i>
+			        <% end %>
+			    <% else %>
+			        <%= link_to favorite_post_path(post, type: "unfavorite"), method: :put, class:"btn btn_favorite" do %>
+			            <i class="fas fa-heart active"></i>
+			        <% end %>
+			    <% end %>
+			<% end %>
+		</div>
+		<% end %>
+	</div>
+</div>	
+
+

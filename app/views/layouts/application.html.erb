@@ -21,8 +21,11 @@
         <%= link_to root_path, class: "btn btn-control" do %>
           <i class="fas fa-home"></i>
         <% end %>
-        <%= link_to root_path, class: "btn btn-control" do %>
-          <i class="fas fa-heart"></i>
+        <%= link_to posts_path, class: "btn btn-control" do %>
+            <i class="fas fa-shopping-cart"></i>
+        <% end %>
+        <%= link_to favorite_posts_path, class: "btn btn-control" do %>
+            <i class="fas fa-heart"></i>
         <% end %>
 
         <div class="dropdown">

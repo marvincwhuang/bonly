@@ -1,5 +1,7 @@
 <%= javascript_include_tag('show.js') %>
 
+
+
 <div id="show">
 	<div class="image_slider">
 		<div class="image_container">
@@ -33,15 +35,23 @@
 		</div>
 		<div class="control">
 			<div class="back">
-				<%= link_to "Back", posts_path, class:"btn btn_back"  %>
+				<%= link_to "More", posts_path, class:"btn btn_back"  %>
 			</div>
 			<div class="favorite">
-				<i class="fas fa-heart"></i>
-				<%= link_to "Add to favorite", class:"btn btn_favorite" %>
+				<% if current_user %>
+					<% if !@post.favorited_by.ids.include? current_user.id %>
+						<%= link_to favorite_post_path(@post, type: "favorite"), method: :put, class:"btn btn_favorite" do %>
+				        	<i class="far fa-heart"></i> Add
+				        <% end %>
+				    <% else %>
+				        <%= link_to favorite_post_path(@post, type: "unfavorite"), method: :put, class:"btn btn_favorite" do %>
+				            <i class="fas fa-heart"></i> Remove
+				        <% end %>
+				    <% end %>
+				<% end %>
 			</div>
 		</div>
 	</div>
-
 </div>
 
 

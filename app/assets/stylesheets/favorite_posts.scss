@@ -1,0 +1,67 @@
+// Place all the styles related to the favorite_posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#index {
+	background-color: rgba(255,255,255,1);
+	font-size: 0;
+	min-height: calc(100vh - 36px - 64px);
+	padding: 0 40px 0 40px;
+
+	.post {
+		display: inline-block;
+		box-sizing: border-box;
+		border: none;
+		margin: 12px 6px 12px 6px;
+		padding: none;
+		width: calc(20vw - 12px - 100px/5);
+		min-height: calc(20vw * 4 /3 - 12px - 100px/2 + 60px);
+		vertical-align: top; 
+		position: relative;
+		@media (max-width: 1200px) {
+			width: calc(25vw - 12px - 100px/4);
+			height: calc(25vw * 4 /3 - 12px - 100px/2 + 60px);
+		}
+		@media (max-width: 992px) {
+			width: calc(33.33vw - 12px - 100px/3);
+			height: calc(33.33vw * 4 /3 - 12px - 100px/2 + 60px);
+		}
+		@media (max-width: 768px) {
+			width: calc(50vw - 12px - 100px/2);
+			height: calc(50vw * 4 /3 - 12px - 100px/2 + 60px);
+		}
+		img {
+			width: 100%;
+			height: calc(100% - 60px);
+			object-fit: cover;
+		}
+		p {
+			height: 60px;
+			font-size: 18px;
+			margin-top: 5px;
+			color: rgba(0,0,0,0.6);
+		}
+		.btn_favorite {
+			position: absolute;
+			font-size: 24px;
+			z-index: 999;
+			top: 5px;
+			left: 5px;	
+			color: rgba(0,0,0,0.2);
+			border: none;	
+			padding: none;
+		}
+		.btn_favorite:hover {
+			color: rgba(0,0,0,1);	
+		}
+		.active{
+			color: rgba(0,0,0,1);	
+		}
+	}
+}
+
+
+
+
+
