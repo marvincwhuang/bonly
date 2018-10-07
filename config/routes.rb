@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   	put :favorite, on: :member
   end
   resources :favorite_posts
-
+  get 'admin/index'
   root 'main#index'
 end

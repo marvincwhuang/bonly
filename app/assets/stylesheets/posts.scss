@@ -1,6 +1,21 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.admin-tool {
+	height: 36px;
+	display: flex;
+	justify-content: center;
+	a {
+		font-size: 24px;
+		text-decoration: none;
+		margin: 5px;
+		color: #000080;
+	}
+}
+
+
+
 #index {
 	background-color: rgba(255,255,255,1);
 	font-size: 0;
@@ -56,12 +71,17 @@
 		.active{
 			color: rgba(0,0,0,1);	
 		}
-
+		.admin-tool {
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			z-index: 999;
+		}
 	}
 }
 
 #show {
-	min-height: calc(100vh - 36px - 64px );
+	min-height: calc(100vh - 36px - 64px - 36px );
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -96,6 +116,11 @@
 			.li_image {
 				float: left;
 				list-style: none;
+				img {
+					width: 300px;
+					height: 400px;
+					object-fit: cover;
+				}
 			}
 		}
 	}
@@ -112,6 +137,11 @@
 			list-style: none;
 			margin: 0 5px 0 5px;
 			opacity: 0.6;
+			img {
+				width: 45px;
+				height: 60px;
+				object-fit: cover;
+			}
 		}
 		.image_btn:hover {
 			box-shadow: 0 2px 6px rgba(0,0,0,0.6);
@@ -240,9 +270,6 @@
 	}
 
 }
-
-
-
 
 
 

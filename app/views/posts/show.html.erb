@@ -2,6 +2,19 @@
 
 
 
+<div class="admin-tool">
+	<% if current_user %>
+		<% if current_user.admin == true %>
+	  		<%= link_to edit_post_path(@post) do %>
+	  			<i class="far fa-edit"></i>
+	  		<% end %> 
+			<%= link_to @post, method: :delete, data: { confirm: 'Are you sure?' } do %>
+	  			<i class="far fa-trash-alt"></i>
+	  		<% end %>
+		<% end %>
+	<% end %>
+</div>
+
 <div id="show">
 	<div class="image_slider">
 		<div class="image_container">

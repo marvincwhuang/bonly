@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-	before_action :authenticate_user! 
+	before_action :authenticate_user!, except: [ :show, :index ]
+	before_action :authenticate_admin!, only: [ :new, :create, :edit, :update, :destroy]
 	before_action :find_post, only: [ :show, :edit, :update, :destroy, :favorite ]
 
 
@@ -38,7 +39,7 @@ class PostsController < ApplicationController
 
 	def destroy
 		@post.destroy
-		redirect_to root_path
+		redirect_to posts_path
 	end
 
 	# Add and remove favorite postss
@@ -68,5 +69,14 @@ class PostsController < ApplicationController
     
 	def post_params
 		params.require(:post).permit(:title, :content, images: [])
+	end
+
+	def authenticate_admin!
+	    # check if current user is admin
+	    unless current_user.admin
+	      # if current_user is not admin redirect to some route
+	      redirect_to root_path
+	    end
+	    # if current_user is admin he will proceed to edit action
 	end
 end
