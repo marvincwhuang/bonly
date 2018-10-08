@@ -47,9 +47,6 @@
 			<p><%= @post.content %></p>	
 		</div>
 		<div class="control">
-			<div class="back">
-				<%= link_to "More", posts_path, class:"btn btn_back"  %>
-			</div>
 			<div class="favorite">
 				<% if current_user %>
 					<% if !@post.favorited_by.ids.include? current_user.id %>
@@ -62,6 +59,9 @@
 				        <% end %>
 				    <% end %>
 				<% end %>
+			</div>
+			<div class="back">
+				<%= link_to "- More -", posts_path, class:"btn btn_back"  %>
 			</div>
 		</div>
 	</div>

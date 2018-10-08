@@ -152,6 +152,9 @@
 		margin: 50px 0 0 0;
 		position: relative;
 		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		p {
 			color: rgba(0,0,0,0.8);
 			word-wrap: normal;
@@ -160,31 +163,30 @@
 	}
 	.control {
 		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 20px;
 		div {
 			display: inline-block;
-			// border: 2px solid black;
 			border-radius: 3px;
 			padding: 5px 15px 5px 15px;
-			margin: 5px;
+			margin: 15px 0 0 0;
 			font-size: 18px;
 			line-height: 24px;
-			&.back {
-				background: rgba(0,0,0,0.3);
-				border: none;
-				a{
-					color: rgba(255,255,255,0.8);
-					border: none;
-					text-decoration: none;
-				}
+			a {
+				text-decoration: none;
 			}
-			&.favorite {
-				a{
-					text-decoration: none;
-					color: rgba(0,0,0,0.6)
-				}
+			.btn_back {
+				color: rgba(0,0,0,0.6);
+				border: none;
+
+			}
+			.btn_favorite {
+				color: rgba(0,0,0,0.6);
 				i {
 					color: black;
-					margin-right: 5px;
 				}
 			}
 		}
