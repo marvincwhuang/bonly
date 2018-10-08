@@ -16,14 +16,14 @@
 
 /* Components */
 .btn {
-	font-size: 18px;
-	line-height: 26px;
+	font-size: 14px;
 	border: 2px solid black;
 	border-radius: 3px;
 	padding: 5px 15px 5px 15px;
 	cursor: pointer;
+	text-decoration: none;
+	color: rgba(0,0,0,1)
 }
-
 .btn-control {
 	font-size: 18px;
 	border: none;
@@ -31,7 +31,6 @@
 	cursor: pointer;
 	color: rgba(255,255,255,0.9);
 }
-
 .btn-lang {
 	padding: 0;
 	border: none;
@@ -121,7 +120,7 @@
 }
 
 .container {
-	min-height: calc(100vh - 36px - 64px)
+	min-height: calc(100vh - 36px - 64px);
 }
 
 footer {
