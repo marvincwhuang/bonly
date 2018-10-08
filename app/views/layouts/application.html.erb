@@ -18,6 +18,13 @@
       </div>
 
       <div class="control" data-no-turbolink>
+        <% if user_signed_in? %>
+          <% if current_user.admin == true %>
+            <%= link_to new_post_path, class: "btn btn-control" do %>
+              <i class="fas fa-folder-plus"></i>
+            <% end %>
+          <% end %>
+        <% end %>
         <%= link_to root_path, class: "btn btn-control" do %>
           <i class="fas fa-home"></i>
         <% end %>
