@@ -15,10 +15,12 @@
 
 <div class="new" id="new-in">
 	<div class="image-slider">
-		<div class="arrows">
-			<span title="left" class="arrow"> < </span>
-			<span title="right" class="arrow" style="float: right"> > </span>
-		</div>
+		<% if @post.size > 6 %>
+			<div class="arrows">
+				<span title="left" class="arrow"> < </span>
+				<span title="right" class="arrow" style="float: right"> > </span>
+			</div>
+		<% end %>
 		<div class="images">
 			<% @post.each do |post| %>
 				<%= link_to post do %>
