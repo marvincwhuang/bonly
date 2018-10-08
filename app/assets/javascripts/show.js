@@ -1,6 +1,5 @@
 var COUNT = 0;
 var TIMER;
-
 window.onload = function () {
 	var ul_images = document.getElementsByClassName("ul_images")[0];
 	var li_image = document.getElementsByClassName("li_image");

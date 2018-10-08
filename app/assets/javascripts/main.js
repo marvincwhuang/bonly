@@ -2,16 +2,12 @@ var COUNT = 0;
 var TIMER;
 var GO = false;
 var LANG = CN;
-
 window.onload = function() {
 	lang();
 	var images = document.getElementsByClassName("images")[0];
 	var image = document.getElementsByClassName("image");
 	var arrow = document.getElementsByClassName("arrow");
-
 	showtime();
-
-	
 	function showtime() {
 	    TIMER = setInterval(function(){
 	      	if ( image.length > 6 ) {
@@ -22,10 +18,8 @@ window.onload = function() {
 	        		imagetransform();
 	       		}
 	    	}
-
 		}, 2000);
 	}
-
 	 for ( var i=0; i<arrow.length; i++ ) {
 	 	arrow[i].onmouseover = function(){
 	 		clearInterval(TIMER);
@@ -55,25 +49,16 @@ window.onload = function() {
 	 function imagetransform() {
 	   images.style.transform = `translate(${ -300 * COUNT }px)`;
 	 }    
-
-
-
 }
-
 /* Language Init */
 function lang() {
 	if (sessionStorage.getItem("lang")) {
 		LANG = sessionStorage.getItem("lang");
-	}
-	if (LANG == 'EN') {
-		langEN();
-	}
-	else {
-		langCN();
+		if (LANG == 'EN') {
+			langEN();
+		}
 	}
 }
-
-
 /* Language Switch */
 var CN = document.getElementById("CN");
 var EN = document.getElementById("EN");
@@ -108,7 +93,6 @@ function langEN() {
 }
 function langCN() {
 	sessionStorage.setItem("lang", "CN");
-
 	var slogan = document.getElementById("slogan");
 	var btn_new = document.getElementsByClassName("btn-new")[0];
 	var about_title1 = document.getElementById("about_title1");
