@@ -197,6 +197,7 @@
 
 #new {
 	position: relative;
+	min-height: 550px;
 
 	h1 {
 		text-align: center;
@@ -209,6 +210,7 @@
 
 #edit {
 	position: relative;
+	min-height: 550px;
 
 	h1 {
 		text-align: center;
@@ -235,7 +237,7 @@
 
 .form {
 	display: inline-block;
-	height: calc(100vh - 36px - 70px - 64px - 30px);
+	min-height: calc(100vh - 36px - 70px - 64px - 30px);
 	margin: 15px;
 	.fields {
 		position: absolute;
