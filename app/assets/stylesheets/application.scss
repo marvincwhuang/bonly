@@ -13,39 +13,34 @@
  *= require_tree .
  *= require_self
  */
-
-/* Components */
 .btn {
-	font-size: 14px;
+	font-size: 18px;
 	border: 2px solid black;
 	border-radius: 3px;
-	padding: 5px 15px 5px 15px;
+	padding: 5px 10px 5px 10px;
 	cursor: pointer;
 	text-decoration: none;
 	color: rgba(0,0,0,1)
 }
 .btn-control {
-	font-size: 18px;
+	margin-top: 1px;
+	font-size: 20px;
 	border: none;
-	padding: 5px 8px 5px 8px;
 	cursor: pointer;
 	color: rgba(255,255,255,0.9);
 }
 .btn-lang {
 	padding: 0;
 	border: none;
-	display: inline-block;
-	text-decoration: none;
-	color: white;
-	font-size: 14px;
+	color: rgba(255,255,255,1);
 	line-height: 36px;
+	font-size: 16px;
 }
-
 .navbar {
 	height: 36px; 
 	position: relative;
 	background-color: rgba(0,0,0,1);
-	padding: 0 50px 0 50px;
+	padding: 0 30px 0 30px;
 	.lang {
 		display: inline-block;
 		float: left;
@@ -59,7 +54,6 @@
 		}
 	}
 }
-
 @media (max-width: 768px) {
 	.navbar {
 		height: 36px; 
@@ -85,7 +79,6 @@
 		}
 	}
 }
-
 .dropdown {
   display: inline-block;
   .dropdown-btn {
@@ -114,8 +107,12 @@
     	border-bottom: 1px solid rgba(0,0,0,0.2);
     }
     .account-id {
-    	color: blue;
+    	color: rgba(255,255,255,1);
+    	background-color: rgba(0,0,0,0.8);
     	cursor: default;
+    }
+    .account-id:hover {
+    	background-color: rgba(0,0,0,0.8);
     }
   }
 }
