@@ -5,7 +5,8 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.0'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '~> 2.7', '>= 2.7.2'
+# gem 'uglifier', '~> 2.7', '>= 2.7.2'
+gem 'uglifier', '~> 4.1', '>= 4.1.19'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
@@ -40,4 +41,4 @@ group :production do
   gem 'rails_12factor'
 end
 gem "aws-sdk-s3", require: false
-
+gem "rack-timeout"
