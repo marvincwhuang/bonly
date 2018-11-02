@@ -14,3 +14,12 @@
 //= require jquery
 //= require activestorage
 
+window.onload = function () {
+  btn = document.getElementsByClassName("btn")
+  var btn_submit = document.getElementsByClassName("btn-submit")[0];
+  btn_submit.onclick = function () {
+    for ( var i=0; i<btn.length; i++ ) {
+      document.getElementsByClassName("btn")[i].removeAttribute("href");
+    }
+  }
+}

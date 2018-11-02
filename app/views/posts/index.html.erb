@@ -2,7 +2,7 @@
 	<% @post.each do |post| %>
 	<div class="post">
 		<%= link_to post do %>
-			<%= image_tag(post.medium(0)) %>  
+			<%= image_tag(post.medium(0)) %>
 		<% end %>
 		<p><%= post.title %></p>
 
@@ -22,7 +22,7 @@
 		      <div class="admin-tool">
 		      		<%= link_to edit_post_path(post) do %>
 		      			<i class="far fa-edit"></i>
-		      		<% end %> 
+		      		<% end %>
 		    		<%= link_to post, method: :delete, data: { confirm: 'Are you sure?' } do %>
 		      			<i class="far fa-trash-alt"></i>
 		      		<% end %>
@@ -35,6 +35,6 @@
 
 	</div>
 	<% end %>
-</div>	
+</div>
 
 

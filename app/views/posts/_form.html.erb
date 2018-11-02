@@ -14,8 +14,8 @@
 			  <%= form.text_area :content %>
 			</div>
 			<div class="actions">
-        <%= button_tag "提交", class: "btn btn-transparent", 'data-disable-with' => "<i class='fa fa-spinner fa-spin'></i> 上傳中...".html_safe %>
-				<%= link_to "取消", posts_path, class: "btn" %>
+				 <%= button_tag "提交", class: "btn btn-submit", 'data-disable-with' => "<i class='fa fa-spinner fa-spin'></i> 上傳中...".html_safe %>
+				<%= link_to "取消", posts_path, class: "btn btn-cancel" %>
 			</div>
 		<% end %>
 	</div>

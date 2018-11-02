@@ -8,33 +8,33 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">      
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
   <body>
     <nav class="navbar">
       <div class="lang">
         <a class="btn btn-lang" id="EN">EN |</a>
-        <a class="btn btn-lang" id="CN">CN</a>  
+        <a class="btn btn-lang" id="CN">CN</a>
       </div>
       <div class="control" >
         <% if user_signed_in? %>
           <% if current_user.admin == true %>
-            <%= link_to new_post_path, class: "btn btn-control", title:"New" do %>
+            <%= link_to new_post_path, class: "btn btn-control btn-new", title:"New" do %>
               <i class="fas fa-folder-plus"></i>
             <% end %>
           <% end %>
         <% end %>
-        <%= link_to root_path, class: "btn btn-control", title:"Home" do %>
+        <%= link_to root_path, class: "btn btn-control btn-home", title:"Home" do %>
           <i class="fas fa-home"></i>
         <% end %>
-        <%= link_to posts_path, class: "btn btn-control", title:"Products" do %>
+        <%= link_to posts_path, class: "btn btn-control btn-product", title:"Product" do %>
             <i class="fas fa-shopping-cart"></i>
         <% end %>
-        <%= link_to favorite_posts_path, class: "btn btn-control", title:"Favorite" do %>
+        <%= link_to favorite_posts_path, class: "btn btn-control btn-favorite", title:"Favorite" do %>
             <i class="fas fa-heart"></i>
         <% end %>
         <div class="dropdown">
-          <%= link_to '#' , class: "btn btn-control", title:"Account" do %>
+          <%= link_to '#' , class: "btn btn-control btn-account", title:"Account" do %>
             <i class="fas fa-user", class: "dropdown-btn"></i>
           <% end %>
           <div class="dropdown-content">
@@ -47,7 +47,7 @@
             <% end %>
           </div>
         </div>
-      </div>  
+      </div>
     </nav>
     <div class="container">
       <%= yield %>
